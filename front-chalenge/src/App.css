@@ -1,0 +1,17 @@
+#root {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+
+}
+
+.testeWidth {
+  justify-content: center;
+  width: 1024px;
+  height: 800px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+}
