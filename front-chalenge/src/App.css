@@ -1,17 +1,14 @@
 #root {
   display: grid;
-  width: 100%;
-  margin: 0 auto;
   text-align: center;
   background-color: white;
-
+  height: 100vh;
+  width: 100vw;
 }
 
 .testeWidth {
   justify-content: center;
-  width: 1024px;
-  height: 800px;
-  background-color: white;
+  background-color: #F0F0F0;
   color: black;
-  margin: 0 auto;
+  width: 100%;
 }
