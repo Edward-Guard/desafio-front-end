@@ -11,7 +11,7 @@ const MainContent = () => {
     const [search, setSearch] = useState('')
     const [dbEmployees, setDbEmployees] = useState([] as Employee[])
     const [listRh, setListRh] = useState([] as Employee[])
-    const [visible, setVisible] = useState('João')
+    const [visible, setVisible] = useState('')
 
     useEffect(() => {
         fetch('http://localhost:3000/employees')
