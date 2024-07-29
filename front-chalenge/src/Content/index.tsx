@@ -20,14 +20,12 @@ const MainContent = () => {
                 setDbEmployees(data)
                 setListRh(data)
             })
-
     }, [])
 
     function FilterRH(info: string) {
         setSearch(info)
         const filtered = FilterDB(info, dbEmployees)
         setListRh(filtered);
-        // Pesquisar por data não funciona adequademente, já que o fomato da data é diferente.
     }
 
     return (
@@ -62,7 +60,7 @@ const MainContent = () => {
                         const { name, job, admission_date, phone, image } = employee
                         return (
                             <>
-                                <tr className='contentRow' key={name}>
+                                <tr key={name}>
                                     <td><img id='imageWeb' src={image} width='34px' alt={name} /></td>
                                     <td>{name}</td>
                                     <td className='webTable'>{job}</td>
@@ -76,22 +74,20 @@ const MainContent = () => {
                                 </tr>
                                 {(visible === name) && (
                                     <>
-                                        <tr className='webHeadRow webRow'>
+                                        <tr className='webHeadRow'>
                                             <td>CARGO</td>
                                             <td>DATA DE ADMISSÃO</td>
                                             <td width='151px'>TELEFONE</td>
                                         </tr>
-                                        <tr className='webBodyRow webRow'>
+                                        <tr className='webBodyRow'>
                                             <td >{job}</td>
                                             <td>{ToDateFormat(admission_date)}</td>
                                             <td>{ToPhoneFormat(phone)}</td>
                                         </tr>
                                     </>
                                 )}
-
                             </>
-                        )
-                    })}
+                        )})}
                 </tbody>
             </table>
         </div>
